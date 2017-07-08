@@ -25,9 +25,11 @@ ActiveRecord::Schema.define(version: 20170708193211) do
     t.datetime "updated_at",   null: false
   end
 
-  create_table "student_companies_mappings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "student_companies_mappings", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "student_id"
     t.integer "company_id"
+    t.index ["company_id"], name: "index_student_companies_mappings_on_company_id", using: :btree
+    t.index ["student_id"], name: "index_student_companies_mappings_on_student_id", using: :btree
   end
 
   create_table "student_marks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

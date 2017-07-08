@@ -10,52 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170708182228) do
+ActiveRecord::Schema.define(version: 20170708193211) do
 
-  create_table "colleges", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "phone_number"
-    t.string "adddress"
-    t.string "city"
-    t.string "state"
-    t.string "country"
-    t.string "zipcode"
+  create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone_number"
+    t.string   "adddress"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "zipcode"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
-  create_table "companies", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "phone_number"
-    t.string "adddress"
-    t.string "city"
-    t.string "state"
-    t.string "country"
-    t.string "zipcode"
+  create_table "student_companies_mappings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "student_id"
+    t.integer "company_id"
   end
 
-  create_table "student_marks", force: :cascade do |t|
-    t.integer "sudent_id"
-    t.integer "sem_1"
-    t.integer "sem_2"
-    t.integer "sem_3"
-    t.integer "sem_4"
-    t.integer "sem_5"
-    t.integer "sem_6"
-    t.integer "sem_7"
-    t.integer "sem_8"
+  create_table "student_marks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "student_id"
+    t.integer  "sem1"
+    t.integer  "sem2"
+    t.integer  "sem3"
+    t.integer  "sem4"
+    t.integer  "sem5"
+    t.integer  "sem6"
+    t.integer  "sem7"
+    t.integer  "sem8"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "students", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.string "phone_number"
-    t.string "adddress"
-    t.string "city"
-    t.string "state"
-    t.string "country"
-    t.string "zipcode"
+  create_table "students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "phone_number"
+    t.string   "adddress"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "zipcode"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end

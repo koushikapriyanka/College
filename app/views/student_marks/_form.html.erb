@@ -1,0 +1,62 @@
+<%= form_for(student_mark) do |f| %>
+  <% if student_mark.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student_mark.errors.count, "error") %> prohibited this student_mark from being saved:</h2>
+
+      <ul>
+      <% student_mark.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :student_id %>
+    <%= f.number_field :student_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sem1 %>
+    <%= f.number_field :sem1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sem2 %>
+    <%= f.number_field :sem2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sem3 %>
+    <%= f.number_field :sem3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sem4 %>
+    <%= f.number_field :sem4 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sem5 %>
+    <%= f.number_field :sem5 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sem6 %>
+    <%= f.number_field :sem6 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sem7 %>
+    <%= f.number_field :sem7 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sem8 %>
+    <%= f.number_field :sem8 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

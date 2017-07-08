@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student_id: 1
+  sem1: 1
+  sem2: 1
+  sem3: 1
+  sem4: 1
+  sem5: 1
+  sem6: 1
+  sem7: 1
+  sem8: 1
+
+two:
+  student_id: 1
+  sem1: 1
+  sem2: 1
+  sem3: 1
+  sem4: 1
+  sem5: 1
+  sem6: 1
+  sem7: 1
+  sem8: 1
